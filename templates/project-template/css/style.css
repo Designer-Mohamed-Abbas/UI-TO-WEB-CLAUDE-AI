@@ -1,0 +1,61 @@
+/*
+Project: {{PROJECT_NAME}}
+Developed by: Mohamed Ahmed Abbas
+Role: Front-End Development
+
+Copyright (c) {{YEAR}} Mohamed Ahmed Abbas.
+All rights reserved.
+*/
+
+/* Design tokens. Mark each as measured / inferred / estimated from the source design. */
+:root {
+  --color-bg: #ffffff;        /* estimated */
+  --color-text: #111111;      /* estimated */
+  --color-accent: #0a66ff;    /* estimated */
+  --font-body: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; /* replace with the design's font */
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 2rem;
+  --radius: 12px;
+  --safe-top: env(safe-area-inset-top, 0px);
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+/* Device simulation (set by preview shell via postMessage). */
+:root[data-device="iphone"]  { --safe-top: 54px; --safe-bottom: 34px; }
+:root[data-device="android"] { --safe-top: 32px; --safe-bottom: 24px; }
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  color: var(--color-text);
+  background: var(--color-bg);
+  line-height: 1.5;
+}
+img { max-width: 100%; height: auto; display: block; }
+
+.skip-link { position: absolute; left: -999px; top: 0; }
+.skip-link:focus { left: var(--space-1); top: var(--space-1); background: #fff; padding: var(--space-1); z-index: 100; }
+
+:focus-visible { outline: 3px solid var(--color-accent); outline-offset: 2px; }
+
+.site-header {
+  display: flex; align-items: center; justify-content: space-between; gap: var(--space-2);
+  padding: calc(var(--space-2) + var(--safe-top)) var(--space-2) var(--space-2);
+}
+.brand { font-weight: 700; color: inherit; text-decoration: none; }
+.nav-toggle { min-width: 48px; min-height: 48px; font: inherit; }
+.site-nav { display: none; flex-direction: column; gap: var(--space-1); }
+.site-nav.is-open { display: flex; }
+.site-nav a { color: inherit; padding: var(--space-1); min-height: 48px; display: flex; align-items: center; }
+.site-nav a[aria-current="page"] { color: var(--color-accent); }
+
+.section { padding: var(--space-3) var(--space-2); max-width: 70rem; margin-inline: auto; }
+.site-footer { padding: var(--space-2) var(--space-2) calc(var(--space-2) + var(--safe-bottom)); }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}

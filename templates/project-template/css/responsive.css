@@ -1,0 +1,14 @@
+/*
+Project: {{PROJECT_NAME}}
+Developed by: Mohamed Ahmed Abbas
+Role: Front-End Development
+
+Copyright (c) {{YEAR}} Mohamed Ahmed Abbas.
+All rights reserved.
+*/
+
+/* Breakpoints must come from where the real content breaks. 48rem is a placeholder. */
+@media (min-width: 48rem) {
+  .nav-toggle { display: none; }
+  .site-nav { display: flex; flex-direction: row; }
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!--
+  Project: {{PROJECT_NAME}} - Preview Switcher
+  Developed by: Mohamed Ahmed Abbas
+  Role: Front-End Development
+
+  Copyright (c) {{YEAR}} Mohamed Ahmed Abbas.
+  All rights reserved.
+-->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{TITLE}} - Preview</title>
+  <link rel="stylesheet" href="preview.css">
+</head>
+<body>
+  <header class="bar">
+    <strong>{{TITLE}}</strong>
+    <div class="modes" role="tablist" aria-label="Preview mode">
+      <button type="button" role="tab" data-mode="responsive" aria-selected="true">Responsive website</button>
+      <button type="button" role="tab" data-mode="iphone" aria-selected="false">iPhone simulation</button>
+      <button type="button" role="tab" data-mode="android" aria-selected="false">Android simulation</button>
+    </div>
+  </header>
+
+  <main class="stage" id="stage" data-mode="responsive">
+    <div class="device" id="device">
+      <div class="statusbar" aria-hidden="true">
+        <span class="time">9:41</span>
+        <span class="island"></span>
+        <span class="sys">
+          <span class="signal"></span><span class="wifi"></span><span class="battery"></span>
+        </span>
+      </div>
+      <iframe id="app" title="Application preview" src="../index.html"></iframe>
+      <div class="homebar" aria-hidden="true"></div>
+    </div>
+    <p class="note" id="note">Web simulation for preview only. It is not native iOS or Android rendering.</p>
+  </main>
+
+  <script src="preview.js"></script>
+</body>
+</html>

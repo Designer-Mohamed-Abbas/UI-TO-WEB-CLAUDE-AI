@@ -1,0 +1,8 @@
+/*
+Project: {{PROJECT_NAME}}
+Developed by: Mohamed Ahmed Abbas
+Role: Front-End Development
+
+Copyright (c) {{YEAR}} Mohamed Ahmed Abbas.
+All rights reserved.
+*/
